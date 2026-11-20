@@ -1,0 +1,12 @@
+{
+  "name": "servicenow-catalog-approval-engine",
+  "version": "1.0.0",
+  "description": "Rule-driven Service Catalog approval routing, SLA escalation policy and catalog client-side validation for ServiceNow, with unit tests.",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "test": "node --test test/*.test.js",
+    "demo": "node scripts/demo.js"
+  },
+  "engines": { "node": ">=18" }
+}

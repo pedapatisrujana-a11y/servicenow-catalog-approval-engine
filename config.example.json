@@ -1,0 +1,12 @@
+{
+  "systemProperties": {
+    "x_portfolio.catalog.auto_approve_below": "50",
+    "x_portfolio.catalog.fallback_approver": "<sys_user sys_id>"
+  },
+  "approvalRuleTable": "u_approval_rule",
+  "slaThresholds": {
+    "1": [{"pct": 50, "level": 1}, {"pct": 75, "level": 2}, {"pct": 90, "level": 3}],
+    "2": [{"pct": 50, "level": 1}, {"pct": 75, "level": 2}, {"pct": 100, "level": 3}],
+    "default": [{"pct": 75, "level": 1}, {"pct": 100, "level": 2}]
+  }
+}
