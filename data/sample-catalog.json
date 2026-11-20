@@ -1,0 +1,26 @@
+{
+  "_note": "Synthetic users, groups and rules for local testing. All names are fictitious.",
+  "sys_user": [
+    {"sys_id": "u_emp", "name": "Alex Employee", "manager": "u_mgr"},
+    {"sys_id": "u_mgr", "name": "Morgan Manager", "manager": "u_dir"},
+    {"sys_id": "u_dir", "name": "Dana Director", "manager": ""},
+    {"sys_id": "u_noboss", "name": "Sam Contractor", "manager": ""},
+    {"sys_id": "u_fin1", "name": "Finance Approver 1"},
+    {"sys_id": "u_fin2", "name": "Finance Approver 2"},
+    {"sys_id": "u_backup", "name": "Riley Backup"}
+  ],
+  "sys_user_grmember": [
+    {"sys_id": "gm1", "group": "grp_finance", "user": "u_fin1"},
+    {"sys_id": "gm2", "group": "grp_finance", "user": "u_fin2"},
+    {"sys_id": "gm3", "group": "grp_security", "user": "u_mgr"}
+  ],
+  "sys_user_delegate": [
+    {"sys_id": "d1", "user": "u_fin2", "delegate": "u_backup", "approvals": "true", "starts": "2026-11-01 00:00:00", "ends": "2026-11-30 23:59:59"}
+  ],
+  "u_approval_rule": [
+    {"sys_id": "r1", "u_name": "Manager approval", "u_active": "true", "u_order": "100", "u_category": "*", "u_min_cost": "0", "u_approver_type": "manager", "u_approver": ""},
+    {"sys_id": "r2", "u_name": "Finance over 5k", "u_active": "true", "u_order": "200", "u_category": "*", "u_min_cost": "5000", "u_approver_type": "group", "u_approver": "grp_finance"},
+    {"sys_id": "r3", "u_name": "Security for software", "u_active": "true", "u_order": "300", "u_category": "software", "u_min_cost": "0", "u_approver_type": "group", "u_approver": "grp_security"},
+    {"sys_id": "r4", "u_name": "Inactive rule", "u_active": "false", "u_order": "400", "u_category": "*", "u_min_cost": "0", "u_approver_type": "user", "u_approver": "u_dir"}
+  ]
+}
